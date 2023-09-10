@@ -1,5 +1,3 @@
-using System.Threading;
-
 namespace Lesson2
 {
     public partial class Form1 : Form
