@@ -50,8 +50,6 @@
             buttonStart.Text = "Start";
             buttonStart.UseVisualStyleBackColor = false;
             buttonStart.Click += buttonStart_Click;
-            buttonStart.KeyDown += buttonStart_KeyDown;
-            buttonStart.KeyPress += buttonStart_KeyPress;
             // 
             // timer1
             // 
@@ -62,7 +60,7 @@
             // 
             pictureBoxStatic.Image = (Image)resources.GetObject("pictureBoxStatic.Image");
             pictureBoxStatic.InitialImage = null;
-            pictureBoxStatic.Location = new Point(405, 178);
+            pictureBoxStatic.Location = new Point(394, 178);
             pictureBoxStatic.Name = "pictureBoxStatic";
             pictureBoxStatic.Size = new Size(95, 110);
             pictureBoxStatic.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -110,6 +108,7 @@
             Controls.Add(buttonStart);
             Name = "Form1";
             Text = "Form1";
+            KeyDown += buttonStart_KeyDown;
             ((System.ComponentModel.ISupportInitialize)pictureBoxStatic).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMoving).EndInit();
             ResumeLayout(false);
