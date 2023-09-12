@@ -60,7 +60,7 @@
             // 
             pictureBoxStatic.Image = (Image)resources.GetObject("pictureBoxStatic.Image");
             pictureBoxStatic.InitialImage = null;
-            pictureBoxStatic.Location = new Point(394, 178);
+            pictureBoxStatic.Location = new Point(419, 178);
             pictureBoxStatic.Name = "pictureBoxStatic";
             pictureBoxStatic.Size = new Size(95, 110);
             pictureBoxStatic.SizeMode = PictureBoxSizeMode.StretchImage;
