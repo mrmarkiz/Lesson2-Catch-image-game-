@@ -67,23 +67,20 @@ namespace Lesson2
                     return;
 
                 isMoving = false;
-                if (aimHigher() || aimLefter())
+                if (aimHigher() || aimLefter() || aimLower() || aimRighter())
                 {
-                    if (aimLefter() || aimRighter())
-                    {
-                        MessageBox.Show("You lost!", "Unluck", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Button buttonRestart = new Button();
-                        buttonRestart.BackColor = Color.White;
-                        buttonRestart.Location = new Point(359, 387);
-                        buttonRestart.Name = "buttonRestart";
-                        buttonRestart.Size = new Size(164, 33);
-                        buttonRestart.TabIndex = 0;
-                        buttonRestart.Text = "Restart";
-                        buttonRestart.UseVisualStyleBackColor = false;
-                        buttonRestart.Click += buttonStart_Click;
-                        this.Controls.Add(buttonRestart);
-                        return;
-                    }
+                    MessageBox.Show("You lost!", "Unluck", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Button buttonRestart = new Button();
+                    buttonRestart.BackColor = Color.White;
+                    buttonRestart.Location = new Point(359, 387);
+                    buttonRestart.Name = "buttonRestart";
+                    buttonRestart.Size = new Size(164, 33);
+                    buttonRestart.TabIndex = 0;
+                    buttonRestart.Text = "Restart";
+                    buttonRestart.UseVisualStyleBackColor = false;
+                    buttonRestart.Click += buttonStart_Click;
+                    this.Controls.Add(buttonRestart);
+                    return;
                 }
                 else
                 {
