@@ -35,7 +35,6 @@
             pictureBoxStatic = new PictureBox();
             pictureBoxMoving = new PictureBox();
             labelPoints = new Label();
-            labelCatchPercent = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBoxStatic).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMoving).BeginInit();
             SuspendLayout();
@@ -60,9 +59,9 @@
             // 
             pictureBoxStatic.Image = (Image)resources.GetObject("pictureBoxStatic.Image");
             pictureBoxStatic.InitialImage = null;
-            pictureBoxStatic.Location = new Point(419, 178);
+            pictureBoxStatic.Location = new Point(431, 195);
             pictureBoxStatic.Name = "pictureBoxStatic";
-            pictureBoxStatic.Size = new Size(95, 110);
+            pictureBoxStatic.Size = new Size(50, 50);
             pictureBoxStatic.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxStatic.TabIndex = 1;
             pictureBoxStatic.TabStop = false;
@@ -87,25 +86,15 @@
             labelPoints.TabIndex = 2;
             labelPoints.Text = "Points: 0";
             // 
-            // labelCatchPercent
-            // 
-            labelCatchPercent.AutoSize = true;
-            labelCatchPercent.Location = new Point(789, 9);
-            labelCatchPercent.Name = "labelCatchPercent";
-            labelCatchPercent.Size = new Size(115, 20);
-            labelCatchPercent.TabIndex = 3;
-            labelCatchPercent.Text = "Catch percent: 0";
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(916, 450);
-            Controls.Add(labelCatchPercent);
             Controls.Add(labelPoints);
-            Controls.Add(pictureBoxMoving);
             Controls.Add(pictureBoxStatic);
             Controls.Add(buttonStart);
+            Controls.Add(pictureBoxMoving);
             Name = "Form1";
             Text = "Form1";
             KeyDown += buttonStart_KeyDown;
@@ -122,6 +111,5 @@
         private PictureBox pictureBoxStatic;
         private PictureBox pictureBoxMoving;
         private Label labelPoints;
-        private Label labelCatchPercent;
     }
 }

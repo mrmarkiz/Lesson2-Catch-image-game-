@@ -18,19 +18,19 @@ namespace Lesson2
             _isProcessKeyPress = false;
             InitializeComponent();
             updatePoints();
-            updateCatchPercent();
+            //updateCatchPercent();
         }
 
         private void updatePoints()
         {
             labelPoints.Text = $"Points: {_points}";
         }
-
+        /*
         private void updateCatchPercent()
         {
             labelCatchPercent.Text = $"Catch percent: {((int)_catchPercent).ToString()}";
         }
-
+        */
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (isMoving)
@@ -54,7 +54,7 @@ namespace Lesson2
             _points = 0;
             _aimSpeed = 5;
             _catchPercent = 0;
-            updateCatchPercent();
+            //updateCatchPercent();
             updatePoints();
             timer1.Start();
         }
@@ -86,10 +86,10 @@ namespace Lesson2
                 {
                     _isProcessKeyPress = true;
                     timer1.Stop();
-                    _catchPercent = findCatchingPercent() * 100;
+                    //_catchPercent = findCatchingPercent() * 100;
                     _points++;
                     updatePoints();
-                    updateCatchPercent();
+                    //updateCatchPercent();
                     pictureBoxMoving.Left = 0;
                     _speed += 3;
                     _aimSpeed += 3;
@@ -128,28 +128,29 @@ namespace Lesson2
 
         private bool aimHigher()
         {
-            return pictureBoxStatic.Bottom < pictureBoxMoving.Top;
+            return pictureBoxStatic.Bottom < pictureBoxMoving.Top + 20;
         }
         private bool aimLower()
         {
-            return pictureBoxStatic.Top > pictureBoxMoving.Bottom;
+            return pictureBoxStatic.Top > pictureBoxMoving.Bottom - 20;
         }
 
         private bool aimLefter()
         {
-            return pictureBoxStatic.Right < pictureBoxMoving.Left;
+            return pictureBoxStatic.Right < pictureBoxMoving.Left - 10;
         }
 
         private bool aimRighter()
         {
-            return pictureBoxStatic.Left > pictureBoxMoving.Right;
+            return pictureBoxStatic.Left > pictureBoxMoving.Right + 10;
         }
-
+        /*
         private double findCatchingPercent()
         {
             int maxArea = pictureBoxMoving.Width * pictureBoxMoving.Height;
             int caughtArea = (pictureBoxMoving.Height - Math.Abs(pictureBoxMoving.Top - pictureBoxStatic.Top)) * (pictureBoxMoving.Width - Math.Abs(pictureBoxMoving.Left - pictureBoxStatic.Left));
             return (double)caughtArea / maxArea;
         }
+        */
     }
 }
